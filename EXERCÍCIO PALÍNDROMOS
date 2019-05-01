@@ -1,0 +1,19 @@
+acentos = {'á': 'a', 'à': 'a', 'â': 'a', 'ã': 'a', 'í': 'i', 'é': 'e', 'ê': 'e', \
+           'ó': 'o', 'õ': 'o', 'ô': 'o', 'ú': 'u', 'ü': 'u', 'ç': 'c', "'": ""}
+outros = '"´`~^¨,.!;:?-_()[]{}<>ºªº¹²³@#$£¢§¬%*+%=&/\\'
+
+frase = str(input('Digite uma frase e descubra se ela é um palíndromo: ')).replace('"', '').replace("'", "").capitalize()
+frase_pronta = frase.lower().strip().replace(' ', '')
+
+for caractere in acentos:
+    frase_pronta = frase_pronta.replace(caractere, acentos[caractere])
+
+for especial in outros:
+    frase_pronta = frase_pronta.replace(especial, '')
+
+fraseinvertida = frase_pronta[::-1]
+
+if frase_pronta == fraseinvertida:
+    print('A frase \"{}\" é um palíndromo.'.format(frase))
+else:
+    print('A frase digitada não é um palíndromo.')
