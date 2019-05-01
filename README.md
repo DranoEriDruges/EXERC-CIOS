@@ -1,2 +1,2 @@
-# EXERC-CIOS
+# EXERCICIOS
 Algorítmos criados em exercícios de programação
