@@ -1,0 +1,12 @@
+num = int(input('Digite um número inteiro e descubra se ele é ou não um número primo: '))
+v = True
+if num < 2:
+    v = False
+else:
+    for c in range (2,num-1):
+        if num % c == 0:
+            v = False
+if v:
+    print('{} é um número primo.'.format(num))
+else:
+    print('{} não é um número primo.'.format(num))
